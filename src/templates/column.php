@@ -75,7 +75,7 @@ $classes = apply_filters( 'wp_bootstrap_blocks_column_classes', $classes, $attri
 ?>
 
 <div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
-	<div class="<?php echo esc_attr( implode( ' ', $column_content_classes ) ); ?>">
+		 <div <?php echo empty($column_content_classes) ? ' class="'.esc_attr( implode( ' ', $column_content_classes ) ).'"' : ''; ?>>
 		<?php echo $content; // phpcs:ignore ?>
 	</div>
 </div>
